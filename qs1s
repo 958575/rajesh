@@ -1,0 +1,54 @@
+QS:1
+
+start with Read the passage from a file or use a hardcoded passage.
+
+Split the passage into words.
+
+Initialize a variable consecutive_the_count to 0 to keep track of consecutive occurrences of 'the' without 'a' in between.
+
+Iterate through the words in the passage.
+
+a. For each word, check if it is 'the'.
+
+b. If it is 'the', check if the next word is also 'the'.
+
+c. If the next word is 'the', check if there is a word 'a' in between. If not, increment consecutive_the_count by 1.
+
+Continue the iteration until all words in the passage have been checked.
+
+Print the value of consecutive_the_count, which represents the count of 'the the' without 'a' in between in the passage.
+
+
+
+program:
+# Hardcoded passage for demonstration
+passage = "The king went to the forest with the wife and a servernt. The king shot a deer. The king went to the forest again the next day."
+
+# Split the passage into words
+words = passage.split()
+
+# Initialize a counter to keep track of consecutive occurrences of 'the' without 'a' in between
+consecutive_the_count = 0
+
+# Iterate through the words in the passage
+for i in range(len(words) - 1):
+    # Convert the current and next word to lowercase for case-insensitive comparison
+    word1 = words[i].lower()
+    word2 = words[i + 1].lower()
+
+    # Check if the current word is 'the' and the next word is also 'the'
+    if word1 == "the" and word2 == "the":
+        # Check if there is 'a' in between
+        if i < len(words) - 2:
+            # Get the word following 'the the' and convert it to lowercase
+            word3 = words[i + 2].lower()
+            
+            # If there's no 'a' in between, increment the counter
+            if word3 != "a":
+                consecutive_the_count += 1
+        else:
+            # If 'the the' is at the end of the passage, increment the counter
+            consecutive_the_count += 1
+
+# Print the count of consecutive 'the the' without 'a' in between
+print("Count of 'the the' without 'a' in between:", consecutive_the_count)
