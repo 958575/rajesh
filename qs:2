@@ -4,6 +4,19 @@
 
     While neither Player A nor Player B has reached 5 points (the winning condition):
 
+    Start the game with an empty 6x6 game board, where each cell is represented as "*."
+
+    Initialize two players, Player A and Player B, both with a score of 0.
+
+    While neither Player A nor Player B has reached 5 points (the winning condition):
+
+    a. Player A takes their turn:
+         Start the game with an empty 6x6 game board, where each cell is represented as "*."
+
+    Initialize two players, Player A and Player B, both with a score of 0.
+
+    While neither Player A nor Player B has reached 5 points (the winning condition):
+
     a. Player A takes their turn:
         Roll a six-sided die to get a random number from 1 to 6. This will be the row number.
         Roll the die again to get a random number from 1 to 6. This will be the column number.
@@ -12,6 +25,34 @@
             Update the cell at (row, col) with Player A's initial.
         If the cell at (row, col) is empty (contains "*"), update it with Player A's initial.
         Display the updated game board.
+
+    b. Check if Player A has reached 5 points. If so, Player A wins, and the game ends.
+
+    c. Player B takes their turn (similar to the steps for Player A):
+        Roll for row and column.
+        Check if the cell at (row, col) on the game board contains the initial of Player A. If it does, do the following:
+            Increment Player B's score by 1.
+            Update the cell at (row, col) with Player B's initial.
+        If the cell at (row, col) is empty, update it with Player B's initial.
+        Display the updated game board.
+
+    d. Check if Player B has reached 5 points. If so, Player B wins, and the game ends.
+
+    End the game and declare the winner (either Player A or Player B) who reaches 5 points first.
+
+    b. Check if Player A has reached 5 points. If so, Player A wins, and the game ends.
+
+    c. Player B takes their turn (similar to the steps for Player A):
+        Roll for row and column.
+        Check if the cell at (row, col) on the game board contains the initial of Player A. If it does, do the following:
+            Increment Player B's score by 1.
+            Update the cell at (row, col) with Player B's initial.
+        If the cell at (row, col) is empty, update it with Player B's initial.
+        Display the updated game board.
+
+    d. Check if Player B has reached 5 points. If so, Player B wins, and the game ends.
+
+    End the game and declare the winner (either Player A or Player B) who reaches 5 points first.
 
     b. Check if Player A has reached 5 points. If so, Player A wins, and the game ends.
 
